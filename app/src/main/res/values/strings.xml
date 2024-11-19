@@ -17,4 +17,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_listado_productos">listadoProductos</string>
     <string name="title_activity_carrito_compras">CarritoCompras</string>
+    <string name="title_activity_ssaax">ssaax</string>
 </resources>
