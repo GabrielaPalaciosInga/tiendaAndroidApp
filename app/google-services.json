@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "683171441096",
+    "project_id": "crud-tienda-7a176",
+    "storage_bucket": "crud-tienda-7a176.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683171441096:android:e8e584918b12346f2d78fd",
+        "android_client_info": {
+          "package_name": "com.example.tienda_crud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcBcjGH-xVL43M_dgGyb8sM7SUq5Jb7Eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
