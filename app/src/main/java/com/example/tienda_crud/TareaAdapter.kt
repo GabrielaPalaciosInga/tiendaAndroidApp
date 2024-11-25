@@ -9,7 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class TareaAdapter (
-    var listaTareas : List<Tarea>,
+    var listaTareas: List<Tarea>,
     val onBorrarClick:(String)-> Unit,
     val onActualizarClick: (Tarea) -> Unit,
 ): RecyclerView.Adapter<TareaAdapter.ViewHolder>()
@@ -19,12 +19,11 @@ class TareaAdapter (
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //Card View
         val cvTarea: CardView = itemView.findViewById(R.id.cvTarea)
-        val nombres: TextView = itemView.findViewById(R.id.nombres)
-        val apellidos: TextView = itemView.findViewById(R.id.apellidos)
-        val cedula: TextView = itemView.findViewById(R.id.cedula)
-        val correo: TextView = itemView.findViewById(R.id.correo)
+        val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
+        val tvApellido: TextView = itemView.findViewById(R.id.tvApellido)
+        val tvCedula: TextView = itemView.findViewById(R.id.tvCedula)
+        val tvCorreo: TextView = itemView.findViewById(R.id.tvCorreo)
         val ibtnBorrar: ImageButton = itemView.findViewById(R.id.ibtnBorrar)
-
 
     }
     //Se conecta el XML con el adaptador
@@ -37,12 +36,12 @@ class TareaAdapter (
     override fun onBindViewHolder(holder: TareaAdapter.ViewHolder, position: Int) {
         val tarea = listaTareas[position]
 
-        holder.nombres.text = tarea.nombres
-        holder.apellidos.text = tarea.apellidos
-        holder.cedula.text = tarea.cedula
-        holder.correo.text = tarea.correo
+        holder.tvNombre.text = tarea.nombre
+        holder.tvApellido.text = tarea.apellido
+        holder.tvCedula.text = tarea.cedula
+        holder.tvCorreo.text = tarea.correo
 
-        //Acciones
+        //Accion borrar
         holder.ibtnBorrar.setOnClickListener {
             onBorrarClick(tarea.id)
         }

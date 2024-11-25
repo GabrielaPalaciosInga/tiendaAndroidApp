@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!--Agregando permisos y uso  de la camara-->
+    <uses-feature android:name="android.hardware.camera"/>
 
     <application
         android:allowBackup="true"

@@ -2,15 +2,15 @@ package com.example.tienda_crud
 
 data class Tarea(
     var id: String = "",
-    var nombres: String = "",
-    var apellidos: String = "",
+    var nombre: String = "",
+    var apellido: String = "",
     var cedula: String = "",
     var correo: String = "",
 ){
     fun toMap(): Map<String , String>{
         return mapOf(
-            "nombres" to nombres,
-            "apellidos" to apellidos,
+            "nombre" to nombre,
+            "apellido" to apellido,
             "cedula" to cedula,
             "correo" to correo
         )
