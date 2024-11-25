@@ -1,7 +1,13 @@
 package com.example.tienda_crud
 
+import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.provider.MediaStore
+import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -20,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         viewModel = ViewModelProvider(this)[TareaViewModel::class.java]
 
@@ -82,4 +90,5 @@ class MainActivity : AppCompatActivity() {
         binding.etCedula.setText(tareaEdit.cedula)
         binding.etCorreo.setText(tareaEdit.correo)
     }
+
 }

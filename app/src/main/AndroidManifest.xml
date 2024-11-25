@@ -2,9 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!--Agregando permisos y uso  de la camara-->
-    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Agregando permisos y uso  de la camara -->
+    <!-- Sirve para informar que en los terminales de google que no tengan camara pues no se permita la descarga -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- Para almacenar la foto tomada se le debe dar el permiso de escritura -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tiendacrud"
         tools:targetApi="31">
+        <activity
+            android:name=".UseCAmera"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
