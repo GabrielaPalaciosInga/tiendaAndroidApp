@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Sirve para dar permisos de locacion -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Agregando permisos y uso  de la camara -->
     <!-- Sirve para informar que en los terminales de google que no tengan camara pues no se permita la descarga -->
@@ -22,6 +26,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tiendacrud"
         tools:targetApi="31">
+        <activity
+            android:name=".GpsKolin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UseCAmera"
             android:exported="true" />
